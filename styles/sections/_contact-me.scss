@@ -1,0 +1,32 @@
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryColor;
+    width: 100%;
+    height: $headerHeight*2;
+
+    color: white;
+
+    ul{
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+
+
+    a{
+        color: white;
+        transition: 0.05s linear;
+  
+        &:hover{
+          text-decoration: underline;
+          color: $secondaryColor;
+          filter: brightness(0.95);
+        }
+    }
+}

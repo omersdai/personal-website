@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Wordle</title>
+  </head>
+  <body>
+    <div class="wordle-container">
+      <div class="header">
+        <h1 id="resetBtn">Wordle</h1>
+        <!-- <button id="resetBtn" class="reset-btn">New Game</button> -->
+      </div>
+      <div id="guess" class="guesses">
+        <!-- <div class="row">
+          <div class="square active">S</div>
+          <div class="square grey">E</div>
+          <div class="square yellow">S</div>
+          <div class="square green">Ç</div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="row">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div> -->
+        <div id="error" class="error hidden"></div>
+      </div>
+
+      <div class="keyboard">
+        <div class="row">
+          <button class="key">E</button>
+          <button class="key">R</button>
+          <button class="key">T</button>
+          <button class="key">Y</button>
+          <button class="key">U</button>
+          <button class="key">I</button>
+          <button class="key">O</button>
+          <button class="key">P</button>
+          <button class="key">Ğ</button>
+          <button class="key">Ü</button>
+        </div>
+        <div class="row">
+          <button class="key">A</button>
+          <button class="key">S</button>
+          <button class="key">D</button>
+          <button class="key">F</button>
+          <button class="key">G</button>
+          <button class="key">H</button>
+          <button class="key">J</button>
+          <button class="key">K</button>
+          <button class="key">L</button>
+          <button class="key">Ş</button>
+          <button class="key">İ</button>
+        </div>
+        <div class="row">
+          <button id="enterBtn" class="large-key">ENTER</button>
+          <button class="key">Z</button>
+          <button class="key">C</button>
+          <button class="key">V</button>
+          <button class="key">B</button>
+          <button class="key">N</button>
+          <button class="key">M</button>
+          <button class="key">Ö</button>
+          <button class="key">Ç</button>
+          <button id="backspaceBtn" class="large-key">
+            <i class="fas fa-backspace"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="wordle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

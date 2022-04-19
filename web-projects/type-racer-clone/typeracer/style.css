@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  list-style: none;
+}
+
+body {
+  font-family: 'Arial', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: royalblue;
+}
+
+.upper-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 1000px;
+  height: 200px;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+}
+
+.game-info {
+  width: 80%;
+}
+
+.game-info .game-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100px;
+}
+
+.game-stats .left,
+.game-stats .right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-stats .left {
+  gap: 40px;
+}
+
+.game-stats .left > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-stats .right {
+}
+
+.upper-game .car-progress {
+  width: 100%;
+  height: 40px;
+  border-bottom: 4px dashed black;
+  padding: 10px;
+}
+
+.car-progress .car {
+  color: white;
+  font-size: 25px;
+  /* transform: translateX(50%); */
+}
+
+.lower-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 15px;
+  width: 1000px;
+  min-height: 300px;
+  padding: 20px 0px;
+}
+
+.lower-game * {
+  font-size: 1.4rem;
+}
+
+.lower-game .game-text {
+  height: auto;
+  width: 80%;
+  color: black;
+  border-radius: 5px;
+  padding: 20px 10px;
+  background-color: #fff;
+  user-select: none;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+.lower-game input {
+  height: 2.5rem;
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.lower-game input:focus {
+  height: 2.5rem;
+  border-radius: 5px;
+  border-color: black;
+}
+
+.lower-game input:disabled {
+  cursor: not-allowed;
+}
+
+.word.done {
+  color: rgb(199, 209, 199);
+}
+
+.char.underline {
+  text-decoration: underline;
+}
+
+.char.active {
+  border-left: 1px solid black;
+}
+
+.char.correct {
+  color: rgb(35, 223, 35);
+}
+
+.word.done .char.correct {
+  color: inherit;
+}
+
+.char.incorrect {
+  background-color: rgb(255, 134, 134);
+}
+
+.btn {
+  height: 40px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #0d6efd;
+  background-color: #3cc1a3;
+  color: #fff;
+  transition: all 0.1s ease;
+}
+
+.btn:active {
+  /* cool clicking animation */
+  transform: scale(0.93);
+}
+
+.btn:disabled {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.4);
+}

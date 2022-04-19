@@ -1,0 +1,35 @@
+.main-page{
+    height: 90vh;
+    width: 100%;
+  
+    display: flex;
+  
+    .left-side{
+      width: 50%;
+      height: 100%;
+      @extend .flex-center;
+      img{
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+      }
+    }
+  
+    .right-side{
+      width: 50%;
+      height: 100%;
+      font-size: 50px;
+      @extend .flex-center;
+      flex-direction: column;
+      gap: 20px;
+      word-wrap: break-word;
+      text-align: center;
+      button{
+        @extend %btn;
+        background-color: $primaryColor;
+        color: white;
+        border: 2px solid black;
+      }
+    }
+  
+  }

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+@import './utilities';
+
+$border: 20px solid black;
+$primaryColor: rgb(86,85,148);
+$secondaryColor: rgb(201, 102, 206);
+$bgColor: rgb(216, 216, 216);
+$headerHeight: 80px;
+$fontSize: 20px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: $bgColor;
+  font-size: $fontSize;
+}
+
+@import './sections/header';
+@import './sections/main';
+@import './sections/about-me';
+@import './sections/education-skills';
+@import './sections/web-projects';
+@import './sections/contact-me';
+
+
+

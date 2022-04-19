@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+@import './utilities';
+
+$primaryColor: steelblue;
+$border: 5px solid black;
+$boardColor: rgba(206, 80, 42, 0.541);
+$squareSize: 100px;
+$gap: 15px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: steelblue;
+}
+
+.game-header {
+  width: 475px;
+  font-size: 15px;
+  padding: 10px 20px;
+  .top-header {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      width: 100%;
+      font-size: 50px;
+      text-align: center;
+    }
+  }
+
+  .score-header {
+    display: flex;
+  }
+
+  .game-score {
+    @include set-background(rgb(0, 81, 255));
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bot-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .reset-btn {
+    @extend %btn;
+    @include set-background($darkBlue);
+  }
+}
+
+.game-container {
+  z-index: -3;
+  background-color: $boardColor;
+  margin: 10px;
+  padding: $gap;
+  position: relative;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  .game-row {
+    display: flex;
+    gap: $gap;
+  }
+  .tile {
+    z-index: -2;
+    height: $squareSize;
+    width: $squareSize;
+    background-color: lighten($boardColor, 20%);
+    border-radius: 5px;
+  }
+
+  .square {
+    position: absolute;
+    @extend %flex-center;
+    height: $squareSize;
+    width: $squareSize;
+    background-color: rgb(0, 191, 255);
+    font-size: 40px;
+    transition: 0.1s linear;
+    border-radius: 5px;
+  }
+
+  .square.shrink {
+    transform: scale(0%);
+  }
+
+  .square.enlarge {
+    transform: scale(1.15);
+  }
+}
+
+.how-to-play {
+  max-width: 475px;
+  text-align: center;
+  @include set-background(rgba($color: #000000, $alpha: 0.3));
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.popup {
+  @extend %absolute-center;
+  @include set-background($darkBlue);
+  @extend %flex-center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 35px;
+  border-radius: 10px;
+
+  .reset-btn {
+    @extend %btn;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 41, 41);
+    cursor: pointer;
+
+    &:active {
+      transform: scale(95%);
+    }
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+}

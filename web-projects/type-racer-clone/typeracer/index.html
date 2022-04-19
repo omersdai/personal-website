@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Type Racer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper-game">
+        <h1 id="title">Type Racer</h1>
+        <div class="game-info">
+          <div class="game-stats">
+            <div class="left">
+              <ul>
+                <li>WPM</li>
+                <li>ACC</li>
+              </ul>
+              <ul>
+                <li id="wpm">0</li>
+                <li id="accuracy">N/A</li>
+              </ul>
+            </div>
+            <div class="right">
+              <span id="minute">0</span>:<span id="second">00</span>
+            </div>
+          </div>
+          <div class="car-progress">
+            <div class="car" id="car">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lower-game">
+        <div class="game-text" id="gameText">
+          Look, I was gonna go easy on you Not to hurt your feelings But I'm
+          only going to get this one chance Something's wrong, I can feel it six
+          minutes Just a feeling I've got Like something's about to happen But I
+          don't know what If that means what I think it means Look, I was gonna
+          go easy on you Not to hurt your feelings But I'm only going to get
+          this one chance Something's wrong, I can feel it six minutes Just a
+          feeling I've got Like something's about to happen But I don't know
+          what If that means what I think it means
+          <span class="word"></span>
+        </div>
+        <input type="text" id="textInput" autocomplete="off" />
+        <div class="button-container">
+          <button class="btn" id="startBtn">Start</button>
+          <button class="btn" id="rollBtn">Roll Song</button>
+        </div>
+      </div>
+    </div>
+    <script src="songs.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

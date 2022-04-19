@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+@import './utilities';
+
+$primaryColor: rgb(69, 149, 214);
+
+$border: 1px solid black;
+$boardColor: $green;
+$darkSquareColor: rgba(
+  $color: #000000,
+  $alpha: 0.2,
+);
+$activeSquareColor: lighten($primaryColor, 5%);
+$activeDarkSquareColor: darken($primaryColor, 5%);
+$hoverColor: $orange;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  @include set-background($primaryColor);
+}
+
+.game-title {
+  cursor: pointer;
+  &:hover {
+    color: #ffff;
+  }
+}
+
+.minesweeper-container {
+  background-color: $boardColor;
+  margin: 20px;
+  .game-header {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    padding: 10px;
+  }
+
+  .fa-stopwatch {
+    margin-left: 20px;
+  }
+
+  .difficulty {
+    @extend %input;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .game-text {
+    font-size: 20px;
+  }
+
+  .minesweeper {
+    // height: 500px;
+    // width: 800px;
+    font-weight: bold;
+
+    .square {
+      // $size: 50px;
+      // height: $size;
+      // width: $size;
+      @extend %flex-center;
+      border: $border;
+      &.dark {
+        background-color: $darkSquareColor;
+      }
+
+      &.active {
+        background-color: $activeSquareColor;
+      }
+
+      &.active.dark {
+        background-color: $activeDarkSquareColor;
+      }
+
+      &:not(.active) {
+        cursor: pointer;
+      }
+
+      &:not(.active):hover {
+        background-color: $hoverColor !important;
+      }
+    }
+
+    .row {
+      display: flex;
+    }
+  }
+  .fa-flag,
+  .fa-times {
+    color: red;
+  }
+}
+
+.how-to-play {
+  max-width: 540px;
+  text-align: center;
+  @include set-background(rgba($color: #000000, $alpha: 0.3));
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.popup {
+  @extend %absolute-center;
+  @include set-background($darkBlue);
+  @extend %flex-center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 35px;
+  border-radius: 10px;
+
+  .reset-btn {
+    @extend %btn;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 41, 41);
+    cursor: pointer;
+
+    &:active {
+      transform: scale(95%);
+    }
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+}

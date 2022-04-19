@@ -1,0 +1,54 @@
+.education-skills{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+  
+    .left-side, .right-side{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1{
+          text-align: center;
+      }
+      .list-container{
+          width: 100%;
+      }
+    }
+
+    .left-side{
+        li{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 13px;
+          }
+          a{
+            transition: 0.05s linear;
+      
+            &:hover{
+              text-decoration: underline;
+              color: $secondaryColor;
+              filter: brightness(0.95);
+            }
+              
+          }
+          img{
+            height: 75px;
+            width: 75px;
+            border: 10px;
+            margin-right: 10px;
+          }
+    }
+
+    .right-side{
+        h1{
+            margin-bottom: 30px;
+        }
+        li{
+            margin: 13px;
+        }
+    }
+  }
