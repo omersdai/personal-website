@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Snake Game</title>
+  </head>
+  <body>
+
+      <div class="game-header">
+        <div class="top-header">
+          <h1>Snake</h1>
+          <div class="score-header">
+            <div class="game-score">
+              <span>Score</span>
+              <h3 id="gameScore">31</h3>
+            </div>
+            <div class="game-score">
+              <span>Best</span>
+              <h3 id="bestScore">31</span>
+            </div>
+          </div>
+        </div>
+        <div class="bot-header">
+          <p>Web Based Snake Game</p>
+          <button id="resetBtn" class="reset-btn">Reset</button>
+        </div>
+      </div>
+
+      <div class="snake-game-container" id="snakeContainer"></div>
+      <div class="how-to-play">
+        <h4>HOW TO PLAY:</h4>
+        Use your arrow keys or WASD to move the direction of the snake. Eat the
+        apples to grow longer and collect points! The game ends when the snake
+        collides with its own body
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+.timer {
+  height: 170;
+  width: 620px;
+
+  .timer-display,
+  .timer-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    border: 5px solid black;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    padding: 40px;
+    margin-top: 30px;
+  }
+
+  .time > input,
+  .time > span {
+    font-size: 4rem;
+    width: 90px;
+    padding: 0 5px;
+    text-align: right;
+  }
+
+  .time > span.millisecond {
+    font-size: 3rem;
+  }
+
+  .time > input {
+    @extend %input-remove-arrows;
+  }
+}
+
+.timer-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+
+  > button {
+    cursor: pointer;
+    font-size: 2.3rem;
+    height: 80px;
+    width: 160px;
+    border-radius: 5px;
+    border: none;
+
+    transition: transform 0.1s ease;
+
+    &:active {
+      /* cool clicking animation */
+      transform: scale(0.93);
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+
+.timer-bar {
+  height: 20px;
+  width: 620px;
+  background-color: #43dfd4;
+  border-radius: 5px;
+  overflow: hidden;
+
+  > div {
+    height: 100%;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: width 0.1s linear;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .stopwatch,
+  .split {
+    padding: 0;
+
+    .time > span.millisecond {
+      display: none;
+    }
+  }
+}

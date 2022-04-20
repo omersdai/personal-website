@@ -208,6 +208,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 60px;
+  z-index: 100;
   background-color: #565594;
 }
 

@@ -1,0 +1,98 @@
+.stopwatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  padding: 40px;
+  margin-top: 30px;
+
+  height: 170;
+  width: 620px;
+
+  .time > span {
+    font-size: 4rem;
+  }
+  .time > span.millisecond {
+    font-size: 3rem;
+  }
+}
+
+.stopwatch-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+
+  > button {
+    cursor: pointer;
+    font-size: 2.3rem;
+    height: 80px;
+    width: 160px;
+    border-radius: 5px;
+    border: none;
+
+    transition: transform 0.1s ease;
+
+    &:active {
+      /* cool clicking animation */
+      transform: scale(0.93);
+    }
+  }
+}
+
+.split-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  max-height: 410px;
+  width: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+  margin: 30px 0;
+
+  .split-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .split {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    padding: 10px;
+    width: 540px;
+    margin: 10px;
+  }
+
+  .time > span {
+    font-size: 3rem;
+  }
+
+  .time > span.millisecond {
+    font-size: 2rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .stopwatch,
+  .split {
+    padding: 0;
+
+    .time > span.millisecond {
+      display: none;
+    }
+  }
+}

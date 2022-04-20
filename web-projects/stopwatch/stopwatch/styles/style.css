@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap");
+.hide {
+  display: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100vw;
+  list-style: none;
+}
+
+body {
+  font-family: 'Arial', serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: steelblue;
+  overflow: hidden;
+}
+
+.stopwatch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  padding: 40px;
+  margin-top: 30px;
+  height: 170;
+  width: 620px;
+}
+
+.stopwatch .time > span {
+  font-size: 4rem;
+}
+
+.stopwatch .time > span.millisecond {
+  font-size: 3rem;
+}
+
+.stopwatch-buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+.stopwatch-buttons > button {
+  cursor: pointer;
+  font-size: 2.3rem;
+  height: 80px;
+  width: 160px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.1s ease;
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+.stopwatch-buttons > button:active {
+  /* cool clicking animation */
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+
+.split-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  max-height: 410px;
+  width: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.split-container .split-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.split-container .split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  padding: 10px;
+  width: 540px;
+  margin: 10px;
+}
+
+.split-container .time > span {
+  font-size: 3rem;
+}
+
+.split-container .time > span.millisecond {
+  font-size: 2rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .stopwatch,
+  .split {
+    padding: 0;
+  }
+  .stopwatch .time > span.millisecond,
+  .split .time > span.millisecond {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

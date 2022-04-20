@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Flappy Bird</title>
+  </head>
+  <body>
+    <div class="game-header">
+      <div class="top-header">
+        <h1>Flappy Bird</h1>
+        <div class="score-header">
+          <div class="game-score">
+            <span>Score</span>
+            <h3 id="gameScore">0</h3>
+          </div>
+          <div class="game-score">
+            <span>Best</span>
+            <h3 id="bestScore">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="bot-header">
+        <p>Play Flappy Bird</p>
+        <button id="resetBtn" class="reset-btn">Reset</button>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+
+    <div class="how-to-play">
+      <h4>HOW TO PLAY:</h4>
+      Press space to jump. Avoid touching pillars to continue moving forward.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

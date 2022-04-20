@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+@import './utilities';
+
+$primaryColor: steelblue;
+$border: 20px solid black;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: steelblue;
+}
+
+.game-header {
+  width: 475px;
+  font-size: 15px;
+  padding: 10px 20px;
+  .top-header {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      width: 100%;
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+
+  .score-header {
+    display: flex;
+  }
+
+  .game-score {
+    @include set-background(rgb(0, 81, 255));
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bot-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .reset-btn {
+    @extend %btn;
+    @include set-background($darkBlue);
+  }
+}
+
+canvas {
+  border: $border;
+  background-color: $blue;
+}
+
+.how-to-play {
+  max-width: 540px;
+  text-align: center;
+  @include set-background(rgba($color: #000000, $alpha: 0.3));
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 30px;
+}
